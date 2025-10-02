@@ -1,197 +1,87 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <meta name="description" content="IBM - Tailwind converted project with search, navbar and contact form" />
-  <title>IBM - Tailwind Version</title>
-
-  <!-- Tailwind CDN (no build step) -->
-  <script src="https://cdn.tailwindcss.com"></script>
-
-  <!-- Optional: small Tailwind config to enable extended utilities -->
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            primary: '#0f172a',
-            accent: '#0ea5a4'
-          }
-        }
-      }
-    }
-  </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Portfolio</title>
+  <link rel="stylesheet" href="style.css">
 </head>
-<body class="bg-gray-50 text-slate-800 antialiased">
-
-  <!-- NAVBAR -->
-  <header class="bg-white shadow-sm">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6">
-      <div class="flex justify-between items-center h-16">
-        <div class="flex items-center gap-4">
-          <a href="#" class="text-xl font-semibold text-primary">IBM</a>
-          <nav class="hidden md:flex gap-3" aria-label="Main Navigation">
-            <a href="#features" class="px-3 py-2 rounded-md hover:bg-gray-100">Features</a>
-            <a href="#gallery" class="px-3 py-2 rounded-md hover:bg-gray-100">Gallery</a>
-            <a href="#contact" class="px-3 py-2 rounded-md hover:bg-gray-100">Contact</a>
-          </nav>
-        </div>
-
-        <!-- Desktop actions -->
-        <div class="hidden md:flex items-center gap-2">
-          <input id="searchInput" type="search" placeholder="Search..." aria-label="Search"
-                 class="border border-gray-200 rounded-md px-3 py-2 w-64 focus:outline-none focus:ring-2 focus:ring-accent" />
-          <a href="#contact" class="inline-flex items-center px-4 py-2 bg-accent text-white rounded-md hover:opacity-95">Contact</a>
-        </div>
-
-        <!-- Mobile menu button -->
-        <div class="md:hidden">
-          <button id="navToggle" aria-expanded="false" aria-controls="mobileMenu" class="p-2 rounded-md focus:ring-2 focus:ring-accent">
-            <span class="sr-only">Open main menu</span>
-            <!-- hamburger -->
-            <svg id="hamburger" class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 8h16M4 16h16" />
-            </svg>
-            <!-- X icon (hidden initially) -->
-            <svg id="closeIcon" class="h-6 w-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
-            </svg>
-          </button>
-        </div>
-      </div>
-    </div>
-
-    <!-- Mobile menu -->
-    <div id="mobileMenu" class="md:hidden hidden border-t border-gray-100">
-      <div class="px-2 pt-2 pb-3 space-y-1">
-        <a href="#features" class="block px-3 py-2 rounded-md">Features</a>
-        <a href="#gallery" class="block px-3 py-2 rounded-md">Gallery</a>
-        <a href="#contact" class="block px-3 py-2 rounded-md">Contact</a>
-        <div class="px-3 py-2">
-          <input id="searchInputMobile" type="search" placeholder="Search..." aria-label="Search"
-                 class="border border-gray-200 rounded-md px-3 py-2 w-full focus:outline-none focus:ring-2 focus:ring-accent" />
-        </div>
-      </div>
-    </div>
+<body>
+  <!-- Navigation -->
+  <header>
+    <nav>
+      <h1 class="logo">My Portfolio</h1>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
   </header>
 
-  <!-- HERO -->
-  <main class="max-w-6xl mx-auto px-4 sm:px-6 py-10">
-    <section class="bg-gradient-to-r from-white to-slate-50 rounded-lg p-6 mb-8 shadow-sm">
-      <div class="md:flex md:items-center md:justify-between gap-6">
-        <div>
-          <h1 class="text-3xl font-extrabold mb-2">Welcome to the IBM Demo</h1>
-          <p class="text-slate-600">Converted to Tailwind CSS. Responsive navbar, search/filter, and contact form included.</p>
-        </div>
-        <div class="mt-4 md:mt-0 flex gap-3 items-center">
-          <a href="#gallery" class="px-4 py-2 bg-primary text-white rounded-md">See Gallery</a>
-          <a href="#contact" class="px-4 py-2 border border-gray-200 rounded-md hover:bg-gray-50">Get in touch</a>
-        </div>
+  <!-- Hero Section -->
+  <section class="hero">
+    <h2>Hello, I'm <span class="highlight">Zaid Ahmed</span></h2>
+    <p>Aspiring Developer | AI Enthusiast | Problem Solver</p>
+    <a href="#contact" class="btn">Hire Me</a>
+  </section>
+
+  <!-- About -->
+  <section id="about">
+    <h2>About Me</h2>
+    <p>
+      I’m a passionate developer with an interest in web development, AI, and problem solving. 
+      I enjoy creating interactive websites and building projects that make life easier.
+    </p>
+  </section>
+
+  <!-- Skills -->
+  <section id="skills">
+    <h2>Skills</h2>
+    <div class="skills-container">
+      <div class="skill">HTML</div>
+      <div class="skill">CSS</div>
+      <div class="skill">JavaScript</div>
+      <div class="skill">Python</div>
+      <div class="skill">AI/ML Basics</div>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section id="projects">
+    <h2>Projects</h2>
+    <div class="projects-container">
+      <div class="project-card">
+        <h3>Smart Study Planner</h3>
+        <p>A web app to organize study schedules with reminders and progress tracking.</p>
       </div>
-    </section>
-
-    <!-- FEATURES -->
-    <section id="features" class="mb-8">
-      <h2 class="text-2xl font-semibold mb-4">Features</h2>
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-        <article class="p-4 rounded-lg bg-white shadow-sm">
-          <h3 class="font-semibold">Responsive Navbar</h3>
-          <p class="text-sm text-slate-600 mt-1">Hamburger menu for small screens, links for larger screens.</p>
-        </article>
-        <article class="p-4 rounded-lg bg-white shadow-sm">
-          <h3 class="font-semibold">Search & Filter</h3>
-          <p class="text-sm text-slate-600 mt-1">Client-side search that filters gallery cards in real-time.</p>
-        </article>
-        <article class="p-4 rounded-lg bg-white shadow-sm">
-          <h3 class="font-semibold">Contact Form</h3>
-          <p class="text-sm text-slate-600 mt-1">Simple contact form with client validation and mailto fallback.</p>
-        </article>
+      <div class="project-card">
+        <h3>Task Manager</h3>
+        <p>A simple productivity app to add, edit, and complete tasks efficiently.</p>
       </div>
-    </section>
-
-    <!-- GALLERY / FILTERABLE CARDS -->
-    <section id="gallery" class="mb-12">
-      <div class="flex items-center justify-between mb-4">
-        <h2 class="text-2xl font-semibold">Gallery</h2>
-        <p id="resultCount" class="text-sm text-slate-600"></p>
+      <div class="project-card">
+        <h3>Weather Dashboard</h3>
+        <p>A real-time weather app that fetches and displays live weather updates.</p>
       </div>
+    </div>
+  </section>
 
-      <div id="cardsGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-        <!-- Example cards: add or generate more as needed -->
-        <div class="card p-4 bg-white rounded-lg shadow-sm" data-title="IBM Watson AI">
-          <h3 class="font-semibold">IBM Watson AI</h3>
-          <p class="mt-1 text-sm text-slate-600">AI tools and services demo card.</p>
-        </div>
+  <!-- Contact -->
+  <section id="contact">
+    <h2>Contact Me</h2>
+    <form>
+      <input type="text" placeholder="Your Name" required>
+      <input type="email" placeholder="Your Email" required>
+      <textarea placeholder="Your Message" required></textarea>
+      <button type="submit" class="btn">Send</button>
+    </form>
+  </section>
 
-        <div class="card p-4 bg-white rounded-lg shadow-sm" data-title="Cloud Services">
-          <h3 class="font-semibold">Cloud Services</h3>
-          <p class="mt-1 text-sm text-slate-600">Cloud infrastructure and hosting features.</p>
-        </div>
+  <footer>
+    <p>© 2025 My Portfolio | Built with ❤️ by Me</p>
+  </footer>
 
-        <div class="card p-4 bg-white rounded-lg shadow-sm" data-title="Data Analytics">
-          <h3 class="font-semibold">Data Analytics</h3>
-          <p class="mt-1 text-sm text-slate-600">Analytics and visualization pipeline.</p>
-        </div>
-
-        <div class="card p-4 bg-white rounded-lg shadow-sm" data-title="Security">
-          <h3 class="font-semibold">Security</h3>
-          <p class="mt-1 text-sm text-slate-600">Security best practices and tips.</p>
-        </div>
-
-        <div class="card p-4 bg-white rounded-lg shadow-sm" data-title="Edge Computing">
-          <h3 class="font-semibold">Edge Computing</h3>
-          <p class="mt-1 text-sm text-slate-600">Edge devices, IoT and performance.</p>
-        </div>
-
-        <div class="card p-4 bg-white rounded-lg shadow-sm" data-title="Machine Learning">
-          <h3 class="font-semibold">Machine Learning</h3>
-          <p class="mt-1 text-sm text-slate-600">Model training, evaluation and deployment.</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- CONTACT FORM -->
-    <section id="contact" class="mb-10 bg-white p-6 rounded-lg shadow-sm">
-      <h2 class="text-2xl font-semibold mb-4">Contact</h2>
-      <form id="contactForm" class="grid grid-cols-1 md:grid-cols-2 gap-4" novalidate>
-        <div>
-          <label class="block text-sm font-medium mb-1" for="name">Name</label>
-          <input id="name" name="name" type="text" required
-                 class="w-full border border-gray-200 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-accent" />
-          <p class="mt-1 text-sm text-red-600 hidden" id="nameError">Please enter your name.</p>
-        </div>
-
-        <div>
-          <label class="block text-sm font-medium mb-1" for="email">Email</label>
-          <input id="email" name="email" type="email" required
-                 class="w-full border border-gray-200 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-accent" />
-          <p class="mt-1 text-sm text-red-600 hidden" id="emailError">Please enter a valid email.</p>
-        </div>
-
-        <div class="md:col-span-2">
-          <label class="block text-sm font-medium mb-1" for="message">Message</label>
-          <textarea id="message" name="message" rows="5" required
-                    class="w-full border border-gray-200 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-accent"></textarea>
-          <p class="mt-1 text-sm text-red-600 hidden" id="messageError">Please enter a message (min 10 chars).</p>
-        </div>
-
-        <div class="md:col-span-2 flex items-center gap-3">
-          <button type="submit" class="px-4 py-2 bg-accent text-white rounded-md">Send Message</button>
-          <button type="button" id="resetBtn" class="px-4 py-2 border rounded-md">Reset</button>
-          <p id="formFeedback" class="text-sm text-green-600 hidden">Message ready to send (opens mail client).</p>
-        </div>
-      </form>
-    </section>
-
-    <footer class="text-sm text-slate-500 py-6">
-      <div class="max-w-6xl mx-auto px-4 sm:px-6">
-        <p>Made with ❤️ — Tailwind conversion. Replace files in repo to update your app.</p>
-      </div>
-    </footer>
-  </main>
-
-  <!-- Scripts -->
-  <script type="module" src="./script.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
